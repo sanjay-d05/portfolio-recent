@@ -1,0 +1,222 @@
+/* preloader section */
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: #0c0513;
+  background-image: url(./assets/pre.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#preloader-none {
+  opacity: 0;
+}
+
+#no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* navbar */
+.offcanvas-header-dark .btn-close {
+  filter: invert(1); /* Makes the white 'X' visible on dark background */
+}
+
+.offcanvas-header-light .btn-close {
+  filter: none;
+}
+
+.nav-link-custom {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -2px;
+  background-color: currentColor;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link-custom:hover::after,
+.nav-link-custom.active-nav::after {
+  width: 50%;
+}
+
+/* Hover color for light theme */
+.text-dark.nav-link-custom:hover::after {
+  background-color: #ab3483;
+}
+
+/* Active underline colors */
+.text-portfolio-primary.active-nav::after {
+  background-color: #ffffff !important; /* Dark theme active underline */
+}
+
+.text-dark.active-nav::after {
+  background-color: #000 !important; /* Light theme active underline */
+}
+
+
+
+/* general for all pages */
+.portfolio-container{
+  padding-top: 150px !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  padding-bottom: 50px !important;
+}
+
+/* home */
+.resume-btn{
+  background-color: #ab3483 !important;
+  padding: 8px !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.resume-btn:hover{
+  scale: 1.1 !important;
+}
+
+.social-links{
+  transition: all 0.3s ease !important;
+}
+
+.social-links:hover{
+  scale: 1.1 !important;
+}
+
+.text-portfolio-primary{
+  color: #ab3483 !important;
+}
+
+
+/* about */
+
+.tech-icons {
+  border: 1.5px solid #ab3483;
+  font-size: 4.5em !important;
+  padding: 10px !important;
+  opacity: 0.93 !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-radius: 5px !important;
+  display: table !important;
+  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease  !important;
+}
+.tech-icons:hover {
+  transform: scale(1.05) !important;
+  overflow: hidden !important;
+  border: 2.2px solid #ab3483 !important;
+}
+
+
+/* projects */
+
+.project-card-container-dark {
+  box-shadow: 0 4px 5px 3px #ab3483 !important;
+  color: white !important;
+  background-color: transparent !important;
+  opacity: 0.9 !important;
+  transition: all 0.5s ease 0s !important;
+  height: 100% !important;
+}
+.project-card-container-dark:hover {
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 4px 5px #ab3483 !important;
+}
+.btn-projects-dark{
+  border: 1px solid #ab3483 !important;
+  color: #ab3483 !important;
+  transition: all 0.3s ease !important;
+}
+.btn-projects-dark:hover{
+  color: #fff !important;
+  background-color: #ab3483 !important;
+}
+
+.project-card-container-light {
+  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.1) !important;
+  color: #333 !important;
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+  transition: all 0.5s ease 0s !important;
+  height: 100% !important;
+  border-radius: 8px;
+}
+
+.project-card-container-light:hover {
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: 0 6px 8px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-projects-light {
+  border: 1px solid #ab3483 !important;
+  color: #ab3483 !important;
+  background-color: #ffffff !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-projects-light:hover {
+  color: #ffffff !important;
+  background-color: #ab3483 !important;
+}
+
+/* certificate */
+
+.certificate-card-dark{
+  background: transparent !important;
+  color:  #ffffff !important;
+  border: 2px solid #ab3483 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.certificate-card-light{
+  background-color: #fff !important;
+  color:  #000 !important;
+  border: 2px solid #ab3483 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+/* blogs */
+
+.blog-card-dark{
+  color: #fff !important;
+  border: 2px solid #ab3483 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.view-blog-dark , .view-blog-light{
+ transition: 0.4s all ease-in; 
+}
+
+.view-blog-light:hover{
+  color: #0c0513 !important;
+}
+
+.view-blog-dark:hover{
+  color: #eae3f1 !important;
+}
+
+
