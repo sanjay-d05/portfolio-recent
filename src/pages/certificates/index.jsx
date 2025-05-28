@@ -1,8 +1,5 @@
 import React, { useContext } from 'react' ;
 
-/* framer motion */
-import {motion} from 'framer-motion' ;
-
 /* context */
 import { PortfolioContext } from '../../context/Portfoliocontext';
 
@@ -34,15 +31,8 @@ const rightSlide = { hidden: { opacity: 0, x: 200 }, visible: { opacity: 1, x: 0
 
         <div className="row justify-content-center gap-4 mt-5">
           {certificates.map((certificate , index) => (
-            <motion.div
-            key={index}
-            className='col-12 col-lg-3'
-            style={{ height: 'auto', width: '80%' }}
-            variants={index % 2 === 0 ? leftSlide : rightSlide} // Alternating left and right
-            initial="hidden" 
-            whileInView="visible"
-            >
               <CertificateCard
+              key={index}
               title={certificate.title}
               issuedBy={certificate.issuedBy}
               imgSrc={certificate.imgSrc}
@@ -50,7 +40,6 @@ const rightSlide = { hidden: { opacity: 0, x: 200 }, visible: { opacity: 1, x: 0
               completedOn={certificate.completedOn}
               url={certificate.url}
               />
-            </motion.div>
           ))}
         </div>
 
